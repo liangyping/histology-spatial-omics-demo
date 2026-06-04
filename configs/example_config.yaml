@@ -1,0 +1,44 @@
+# Example configuration for the histology-to-spatial omics demo.
+# This file uses placeholder paths and simplified parameters.
+# It is intended to illustrate the workflow structure only.
+
+project:
+  name: histology_spatial_omics_demo
+  task: histology_to_spatial_gene_prediction
+  seed: 42
+
+data:
+  # Replace these paths with local paths to public or example data.
+  image_patch_dir: /path/to/image_patches
+  spatial_expression_file: /path/to/spatial_expression.csv
+  spatial_coordinates_file: /path/to/spatial_coordinates.csv
+
+  patch_size: 224
+  n_genes: 250
+
+  # Optional gene subset files for evaluation.
+  heg_genes: configs/gene_lists/heg50.json
+  hvg_genes: configs/gene_lists/hvg50.json
+  marker_genes: configs/gene_lists/marker_genes.json
+
+graph:
+  use_graph: true
+  knn_k: 6
+
+model:
+  model_type: simplified_demo_model
+  image_feature_dim: 512
+  hidden_dim: 256
+  output_dim: 250
+
+training:
+  epochs: 20
+  batch_size: 8
+  learning_rate: 1.0e-4
+  validation_split: 0.2
+
+evaluation:
+  metrics:
+    - PCC
+    - Spearman
+    - RMSE
