@@ -97,4 +97,4 @@ This repository is mainly used to demonstrate project organization, preprocessin
 
 ## License
 
-This demo is provided for academic and educational purposes only. A formal license will be added if the repository is publicly released.
+This demo is provided for academic and educational purposes only.
