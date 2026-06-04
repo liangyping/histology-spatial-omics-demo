@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+
+# Model checkpoints and weights
+*.pt
+*.pth
+*.ckpt
+
+# Large data files
+*.npy
+*.npz
+*.h5ad
+*.h5
+*.svs
+*.tif
+*.tiff
+
+# Data and experiment outputs
+data/
+raw_data/
+processed_data/
+logs/
+outputs/
+results/
+benchmark_results/
+checkpoints/
+weights/
+
+# System files
+.DS_Store
+Thumbs.db
